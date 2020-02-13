@@ -12,7 +12,19 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    l1 = ''
+    l2 = ''
+    l3 = ''
+    l4 = ''
+    for coord in matrix:
+        l1 += '{} '.format(coord[0])
+        l2 += '{} '.format(coord[1])
+        l3 += '{} '.format(coord[2])
+        l4 += '{} '.format(coord[3])
+    print(l1)
+    print(l2)
+    print(l3)
+    print(l4)
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
