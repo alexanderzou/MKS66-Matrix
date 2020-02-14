@@ -26,10 +26,25 @@ def print_matrix( matrix ):
     print(l3)
     print(l4)
 
+a = [[2,2,3,4],[12,3,45,65],[433,4,5,2],[2,4,6,30]]
+#print_matrix(a)
+
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    r = 0
+    while r < len(matrix):
+        c = 0
+        while c < len(matrix[r]):
+            if r == c:
+                matrix[r][c] = 1
+            else:
+                matrix[r][c] = 0
+            c += 1
+        r += 1
+
+ident(a)
+print_matrix(a)
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
