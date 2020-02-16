@@ -43,15 +43,35 @@ def ident( matrix ):
             c += 1
         r += 1
 
-ident(a)
-print_matrix(a)
+#ident(a)
+#print_matrix(a)
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    a = 0
+    while a < len(m2):
+        new = []
+        b = 0
+        while b < len(m2):
+            s = 0
+            c = 0
+            while c < len(m1):
+                s += m1[c][b] * m2[a][c]
+                c += 1
+            new.append(s)
+            b += 1
+        m2[a] = new
+        a += 1
+'''
+a = [[4,8],[2,3],[4,1]]
+b = [[3,2,7],[5,8,9]]
+'''
 
-
+a = [[-3,-3,-1,3,-5],[-1,-3,-5,2,3],[-1,-4,3,-1,-2],[-5,-5,-1,-4,-1],[1,3,-3,-4,-1]]
+b = [[0,5,3,4,4],[5,5,0,0,-2],[3,2,-4,-3,0],[-3,0,-1,2,-1],[0,-1,-4,4,3]]
+matrix_mult(a,b)
+print(b)
 
 
 def new_matrix(rows = 4, cols = 4):
