@@ -7,15 +7,10 @@ def draw_lines( matrix, screen, color ):
     while i < len(matrix):
         x0 = matrix[i][0]
         y0 = matrix[i][1]
-        if i == len(matrix) - 1:
-            x1 = matrix[0][0]
-            y1 = matrix[0][1]
-        else:
-            x1 = matrix[i+1][0]
-            y1 = matrix[i+1][1]
-        #print('{},{};{},{}'.format(x0,y0,x1,y1))
+        x1 = matrix[i+1][0]
+        y1 = matrix[i+1][1]
         draw_line(x0,y0,x1,y1,screen,color)
-        i += 1
+        i += 2
 
 def add_edge( matrix, x0, y0, z0, x1, y1, z1 ):
     matrix.append([x0,y0,z0,1])
